@@ -1,41 +1,75 @@
 <!-- Please do not change this logo with link -->
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for avr128db48-training-on-opamp-xoschf-mvio-mplab here
+# Training on OPAMP, XOSCHf and MVIO
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This training consists of 6 assignments exploring some of the new features of the AVR® DB, namely: The Analog Signal Conditioning (OPAMP), the High Frequency Crystal Oscillator (XOSCHF) and the Multi Voltage I/O (MVIO). 
+
+The OPAMP peripheral features up to three internal operational amplifiers (op amps). The op amps can be configured in a multitude of different operations using internal multiplexers and resistor ladders. 
+
+The XOSCHF enables the use of an external crystal or an external clock signal up to 32 MHz. This can be used as a clock source for the Main Clock (CLK_MAIN), the Real-Time Counter (RTC) and the 12-bit Timer/Counter Type D (TCDn).
+
+The MVIO allows PORTC of the AVR DB to run on a different voltage domain (VDDIO2) than the rest of the PORTC.   
+
+* **Assignment 1:**
+External High-Frequency Oscillator (XOSCHF) and Clock Failure Detection (CDF)
+* **Assignment 2:**
+High Frequency TCD using PLL
+* **Assignment 3:**
+Votage Follower
+* **Assignment 4:**
+Instrumentation Amplifier
+* **Assignment 5:**
+Op Amp as a Regulated Power Supply for VDDIO2
+* **Assignment 6:**
+VDDIO2 Failure Detection
+
+Each assignment also comes with a solution project found in the corresponding solution folder. 
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+* [Training Getting Started with AVR DB OPAMP, XOSCHF and MVIO - MPLAB](https://microchip.com/DS40002278)
+* [AVR128DB48 Device Page](https://www.microchip.com/wwwproducts/en/AVR128DB48)
+* [AVR128DB48 Curiosity Nano User Guide](https://www.microchip.com/DS50003037)
+
+### Future Reading
+* [TB3286 - Getting Started with Analog Signal Conditioning (OPAMP)](https://microchip.com/DS90003286)
+* [TB3272 - Getting Started with External High-Frequency Oscillator on AVR DB](https://microchip.com/DS90003272)
+* [TB3287 - Getting Started With MVIO](https://microchip.com/DS90003287)
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
+* [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) 5.40 or later
+* [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) 4..0.2 or later
+* [MPLAB® Code Configurator (MCC) Device Libraries 8-bit AVR MCUs](https://www.microchip.com/mplab/mplab-code-configurator) 2.5.0 or later 
+* [MPLAB® XC8](http://www.microchip.com/mplab/compilers) 2.30 or later
+* MPLAB AVR-Dx_DFP version 1.4.75 or later
+* [MPLAB® Data Visualizer Stand alone](https://www.microchip.com/mplab/mplab-data-visualizer) version 1.1.793 or later
+* [MPLAB® Mindi™ Analog Simulator](https://www.microchip.com/mplab/mplab-mindi)
+* For the Atmel Studio version of these projects, please go to [this repository](https://github.com/microchip-pic-avr-examples/avr128db48-training-on-opamp-xoschf-mvio-studio)
+
 
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
+* [AVR128DB48 Curiosity Nano](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/EV35L43A)
 
 ## Setup
 
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+Most assignments can be completed using the AVR128DB48 Curiosity Nano without any extra components, but some assignments require the MPLAB® Data Visualizer Stand alone, MPLAB® Mindi™ Analog Simulator, a logic analyzer or hardware modifications. See the training manual for setup of specific assignments.
+
+![MCHP](images/avr128db48-cnano.png)
 
 ## Operation
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+* Connect the AVR128DB48 Curiosity Nano to the computer using a USB cable
+* Clone the repository or download the zip to get the source code
+* Open the .X projects with MPLAB in the assignment folder for the desired assignment
+* Complete the assignment according to the training manual 
+* Press *Make and Program Device* to run the example
 
-## Summary
+![SetUpAssignment](images/MplabSetUp.png)
 
-<!-- Summarize what the example has shown -->
+
+## Conclusion
+
+After completing the training you should have a better understanding of some of the new features of the AVR DB such as the OPAMP, XOSCHF and MVIO.

@@ -4,18 +4,18 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-training-on-opamp-xoschf-mvio-mplab",
-        "version": "1.0.0",
-        "displayName": "AVR DB rraining on OPAMP, XOSCHF and MVIO",
+        "version": "1.0.1",
+        "displayName": "AVR DB training on OPAMP, XOSCHF and MVIO",
         "projectName": "avr128db48-training-on-opamp-xoschf-mvio-mplab",
         "shortDescription": "MPLAB X training code examples for the AVR DB family of microcontrollers, demonstrating use of the OPAMP, XOSCHF and MVIO peripherals.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=5.40"
+            "semverRange": ">=5.40.0"
         },
         "compiler": [
             {
                 "name": "XC8",
-				"semverRange": "^2.30"
+				"semverRange": "^2.30.0"
             }
         ],
         "dfp": {

@@ -16,7 +16,7 @@ External High-Frequency Oscillator (XOSCHF) and Clock Failure Detection (CDF)
 * **Assignment 2:**
 High Frequency TCD using PLL
 * **Assignment 3:**
-Votage Follower
+Voltage Follower
 * **Assignment 4:**
 Instrumentation Amplifier
 * **Assignment 5:**

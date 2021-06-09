@@ -52,16 +52,8 @@
             ],
             [
                 "Peripherals", "TCD"
-            ],
-            [
-               "Development Kit", "AVR128DB48 Curiosity Nano"
-            ],
-            [
-                "Supporting Tools", "MPLAB Data Visualizer"
-            ],
-            [
-                "Supporting Tools", "MPLAB Mindi"
             ]
+            
         ],
         "peripherals": [
             "OPAMP", "MVIO", "CLKCTRL", "ADC", "TCD"
@@ -94,7 +86,11 @@
             "PLL",
             "AVR-DB",
             "AVRDB",
-            "training-opamp-xoschf-mvio"
+            "training-opamp-xoschf-mvio",
+			"Curiosity Nano",
+			"MPLAB Data Visualizer",
+			"MPLAB Mindi"
+			
         ],
 		"additionalData": {
 			"longDescription": {

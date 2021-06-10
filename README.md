@@ -45,7 +45,7 @@ Each assignment also comes with a solution project found in the corresponding so
 ## Software Used
 
 * [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) 5.40 or later
-* [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) 4..0.2 or later
+* [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) 4.0.2 or later
 * [MPLAB® Code Configurator (MCC) Device Libraries 8-bit AVR MCUs](https://www.microchip.com/mplab/mplab-code-configurator) 2.5.0 or later 
 * [MPLAB® XC8](http://www.microchip.com/mplab/compilers) 2.30 or later
 * MPLAB AVR-Dx_DFP version 1.8.112 or later

@@ -2,7 +2,7 @@
     "metaDataVersion": "1.0.0",
     "category": "com.microchip.ide.project",
     "content": {
-        "metaDataVersion": "1.1.0",
+        "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-training-on-opamp-xoschf-mvio-mplab",
         "version": "2.0.0",
         "displayName": "AVR DB training on OPAMP, XOSCHF and MVIO",
@@ -15,7 +15,7 @@
         "compiler": [
             {
                 "name": "XC8",
-				"semverRange": "^2.50.0"
+                "semverRange": "^2.50.0"
             }
         ],
         "dfp": {
@@ -37,27 +37,7 @@
             }
         },
         "author": "Martin Mostad",
-        "subcategories": [
-            [
-               "Peripherals", "OPAMP"
-            ],
-            [
-               "Peripherals", "MVIO"
-            ],            			
-            [
-               "Peripherals", "CLKCTRL"
-            ],
-            [
-                "Peripherals", "ADC"
-            ],
-            [
-                "Peripherals", "TCD"
-            ]
-            
-        ],
-        "peripherals": [
-            "OPAMP", "MVIO", "CLKCTRL", "ADC", "TCD"
-        ],
+        "peripherals": ["OPAMP", "MVIO", "CLKCTRL", "ADC", "TCD"],
         "keywords": [
             "Analog Signal Conditioning",
             "Getting Started",
@@ -91,16 +71,16 @@
 			"MPLAB Data Visualizer",
 			"Mindi"			
         ],
-		"additionalData": {
-			"longDescription": {
-				"metaDataVersion": "1.0.0",
-				"category": "com.microchip.portal.fileRef",
-				"content": {
-					"metaDataVersion": "1.0.0",
-					"fileName": "./README.md",
-					"mimeType": "text/markdown"
-				}
-			}
-		}
-	}
+        "additionalData": {
+            "longDescription": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.portal.fileRef",
+                "content": {
+                    "metaDataVersion": "1.0.0",
+                    "fileName": "./README.md",
+                    "mimeType": "text/markdown"
+                }
+            }
+        }
+    }
 }

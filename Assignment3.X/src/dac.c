@@ -26,19 +26,21 @@
 
 #include "dac.h"
 
+uint16_t sine_wave[SINE_WAVE_STEPS];
+
 void sine_wave_table_init(void)
 {
-  for(uint16_t i = 0; i < SINE_WAVE_STEPS; i++)
-  {
-    sine_wave[i] = SINE_DC_OFFSET + SINE_AMPLITUDE * sin(i * M_2PI / SINE_WAVE_STEPS);
-  }
+    for (uint16_t i = 0; i < SINE_WAVE_STEPS; i++)
+    {
+        sine_wave[i] = SINE_DC_OFFSET + SINE_AMPLITUDE * sin(i * M_2PI / SINE_WAVE_STEPS);
+    }
 }
 
 void DAC0_init(void)
 {
     /*Create sinusoidal wave table of values*/
     sine_wave_table_init();
-    
+
     /* DAC output pin */
     /* Disable digital input buffer */
     PORTD.PIN6CTRL &= ~PORT_ISC_gm;
@@ -48,7 +50,7 @@ void DAC0_init(void)
 
     /* Select DAC Voltage reference and always one */
     VREF.DAC0REF |= VREF_REFSEL_1V024_gc | VREF_ALWAYSON_bm;
-    
+
     /* Wait VREF start-up time */
     _delay_us(VREF_STARTUP_MICROS);
 
@@ -60,19 +62,18 @@ void DAC0_init(void)
     DAC0_SineWaveTimer_init();
 }
 
-
 void DAC0_setVal(uint16_t val)
 {
-  DAC0.DATA = (val << DAC_DATA0_bp);
+    DAC0.DATA = (val << DAC_DATA_0_bp);
 }
 
 void DAC0_SineWaveTimer_init(void)
 {
-  /** Timer configured to overflow at ... **/
-  SINE_WAVE_TIMER.CCMP = (F_CPU/SINE_WAVE_STEPS)/OUTPUT_FREQ;
-  /* Clock prescaler */
-  SINE_WAVE_TIMER.CTRLA = TCB_CLKSEL_DIV1_gc;
-  SINE_WAVE_TIMER.INTCTRL = TCB_CAPT_bm;
+    /** Timer configured to overflow at ... **/
+    SINE_WAVE_TIMER.CCMP = (F_CPU / SINE_WAVE_STEPS) / OUTPUT_FREQ;
+    /* Clock prescaler */
+    SINE_WAVE_TIMER.CTRLA = TCB_CLKSEL_DIV1_gc;
+    SINE_WAVE_TIMER.INTCTRL = TCB_CAPT_bm;
 }
 
 void DAC0_SineWaveTimer_enable(void)
@@ -80,7 +81,8 @@ void DAC0_SineWaveTimer_enable(void)
     SINE_WAVE_TIMER.CTRLA |= TCB_ENABLE_bm;
 }
 
-ISR(SINE_WAVE_TIMER_vect) {
+ISR(SINE_WAVE_TIMER_vect)
+{
     volatile static uint16_t sine_wave_index = 0;
 
     data_stream.dacVal = sine_wave[sine_wave_index];

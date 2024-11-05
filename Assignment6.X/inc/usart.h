@@ -37,7 +37,7 @@ typedef struct {
     uint8_t end_token;    
 }data_visualizer_t;
 
-data_visualizer_t data_stream;
+extern data_visualizer_t data_stream;
 
 void usart_init(void);
 void DS_transmit_data(void);

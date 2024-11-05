@@ -26,6 +26,8 @@ VDDIO2 Failure Detection
 
 Each assignment also comes with a solution project found in the corresponding solution folder. 
 
+**NOTE:** The newest version of the code will be slightly different from the code seen in the Training video and guide due to header file and compiler updates.
+
 **Click on the below image for Training video**
 <p align="left">
 <br><a href="https://www.youtube.com/playlist?list=PL9B4edd-p2ag0ErR65zx306mtoHysMyPh" rel="nofollow"><img src="images/YT_Training_AVR_DB.png" alt="AVR DB" width="500"/></a>
@@ -44,12 +46,11 @@ Each assignment also comes with a solution project found in the corresponding so
 
 ## Software Used
 
-* [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) 5.40 or later
+* [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) 6.20 or later
 * [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) 4.0.2 or later
-* [MPLAB® Code Configurator (MCC) Device Libraries 8-bit AVR MCUs](https://www.microchip.com/mplab/mplab-code-configurator) 2.5.0 or later 
-* [MPLAB® XC8](http://www.microchip.com/mplab/compilers) 2.30 or later
-* MPLAB AVR-Dx_DFP version 1.8.112 or later
-* [MPLAB® Data Visualizer Stand alone](https://www.microchip.com/mplab/mplab-data-visualizer) version 1.1.793 or later
+* [MPLAB® XC8](http://www.microchip.com/mplab/compilers) 2.50 or later
+* MPLAB AVR-Dx_DFP version 2.6.303 or later
+* [MPLAB® Data Visualizer Stand alone](https://www.microchip.com/mplab/mplab-data-visualizer) version 1.3.1677 or later
 * [MPLAB® Mindi™ Analog Simulator](https://www.microchip.com/mplab/mplab-mindi)
 * For the Atmel Studio version of these projects, please go to [this repository](https://github.com/microchip-pic-avr-examples/avr128db48-training-on-opamp-xoschf-mvio-studio)
 

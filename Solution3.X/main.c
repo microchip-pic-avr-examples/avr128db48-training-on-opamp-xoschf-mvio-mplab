@@ -40,21 +40,21 @@ void OPAMP0_init(void);
 int main(void)
 {
     /* Set Main Clock to 24 MHz */
-    ccp_write_io((void*)&CLKCTRL.OSCHFCTRLA, CLKCTRL_FREQSEL_24M_gc);
+    ccp_write_io((void*) &CLKCTRL.OSCHFCTRLA, CLKCTRL_FRQSEL_24M_gc);
 
     GPIO_init();
 
     LED0_init();
 
-    RTC_init();     /*1s interrupt timer*/
+    RTC_init(); /*1s interrupt timer*/
 
-    DAC0_init();    /*Creates and outputs the sine waveform*/
+    DAC0_init(); /*Creates and outputs the sine waveform*/
 
-    USART_init();   /*Streams data into Data Visualizer*/
+    USART_init(); /*Streams data into Data Visualizer*/
 
-    ADC0_init();    /*Acquire Signal from OPAMP0 output*/
+    ADC0_init(); /*Acquire Signal from OPAMP0 output*/
 
-    /*Start the timer controlling the sine waveform generator 
+    /*Start the timer controlling the sine waveform generator
     and the timer controlling the acquisition*/
     DAC0_SineWaveTimer_enable();
     ADC0_SampleTimer_enable();
@@ -63,9 +63,9 @@ int main(void)
 
     RTC_enable();
 
-    sei();          /*Enable global interrupts*/
+    sei(); /*Enable global interrupts*/
 
-    while (1) 
+    while (1)
     {
         ;
     }
@@ -74,7 +74,7 @@ int main(void)
 #define OPAMP_TIMEBASE_US     (ceil(F_CPU /1e6)-1)
 #define OPAMP_MAX_SETTLE      (0x7F)
 
-void OPAMP0_init (void) 
+void OPAMP0_init(void)
 {
     /* Configure the Timebase */
     OPAMP.TIMEBASE = OPAMP_TIMEBASE_US;
@@ -86,8 +86,8 @@ void OPAMP0_init (void)
     OPAMP.OP0INMUX = OPAMP_OP0INMUX_MUXNEG_OUT_gc | OPAMP_OP0INMUX_MUXPOS_DAC_gc;
 
     /* Configure the Op Amp n Resistor Wiper Multiplexer */
-    OPAMP.OP0RESMUX =  OPAMP_OP0RESMUX_MUXBOT_OFF_gc | OPAMP_OP0RESMUX_MUXWIP_WIP0_gc | OPAMP_OP0RESMUX_MUXTOP_OFF_gc;
-    
+    OPAMP.OP0RESMUX = OPAMP_OP0RESMUX_MUXBOT_OFF_gc | OPAMP_OP0RESMUX_MUXWIP_WIP0_gc | OPAMP_OP0RESMUX_MUXTOP_OFF_gc;
+
     /* Configure the Op Amp n Settle Time*/
     OPAMP.OP0SETTLE = OPAMP_MAX_SETTLE;
 

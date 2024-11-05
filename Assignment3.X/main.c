@@ -38,21 +38,21 @@ void OPAMP0_init(void);
 int main(void)
 {
     /* Set Main Clock to 24 MHz */
-    ccp_write_io((void*)&CLKCTRL.OSCHFCTRLA, CLKCTRL_FREQSEL_24M_gc);
+    ccp_write_io((void*) &CLKCTRL.OSCHFCTRLA, CLKCTRL_FRQSEL_24M_gc);
 
     GPIO_init();
 
     LED0_init();
 
-    RTC_init();     /*1s interrupt timer*/
+    RTC_init(); /*1s interrupt timer*/
 
-    DAC0_init();    /*Creates and outputs the sine waveform*/
+    DAC0_init(); /*Creates and outputs the sine waveform*/
 
-    USART_init();   /*Streams data into Data Visualizer*/
+    USART_init(); /*Streams data into Data Visualizer*/
 
-    ADC0_init();    /*Acquire Signal from OPAMP0 output*/
+    ADC0_init(); /*Acquire Signal from OPAMP0 output*/
 
-    /*Start the timer controlling the sine waveform generator 
+    /*Start the timer controlling the sine waveform generator
     and the timer controlling the acquisition*/
     DAC0_SineWaveTimer_enable();
     ADC0_SampleTimer_enable();
@@ -61,9 +61,9 @@ int main(void)
 
     RTC_enable();
 
-    sei();          /*Enable global interrupts*/
+    sei(); /*Enable global interrupts*/
 
-    while (1) 
+    while (1)
     {
         ;
     }
@@ -72,7 +72,7 @@ int main(void)
 #define OPAMP_TIMEBASE_US     (ceil(F_CPU /1e6)-1)
 #define OPAMP_MAX_SETTLE      (0x7F)
 
-void OPAMP0_init (void) 
+void OPAMP0_init(void)
 {
     /* Configure the Timebase */
 
@@ -81,13 +81,13 @@ void OPAMP0_init (void)
     /* Configure the Op Amp n Input Multiplexer */
 
     /* Configure the Op Amp n Resistor Wiper Multiplexer */
-    
+
     /* Configure the Op Amp n Settle Time*/
 
     /* Enable OPAMP peripheral */
 
     /* Wait for the operational amplifiers to settle */
-    
+
 }
 
 void GPIO_init(void)

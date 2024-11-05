@@ -41,7 +41,7 @@ typedef struct {
     uint8_t data_available;   /* Flag indicating if data is ready to be streamed to data visualizer */
 }data_visualizer;
 
-data_visualizer data_stream;
+extern data_visualizer data_stream;
 
 /* Communication interface */
 void USART_init(void);

@@ -64,7 +64,7 @@
 #define OUTPUT_FREQ                      (25)
 
 /* Buffer to store the sine wave samples */
-uint16_t sine_wave[SINE_WAVE_STEPS];
+extern uint16_t sine_wave[SINE_WAVE_STEPS];
 
 void DAC0_init(void);
 void DAC0_setVal(uint16_t val);

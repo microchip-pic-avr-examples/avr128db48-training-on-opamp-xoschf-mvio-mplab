@@ -20,20 +20,22 @@
     ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
     THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *
- */ 
+ */
 
 #include "usart.h"
 
+data_visualizer_t data_stream;
+
 void usart_init(void)
 {
-    VPORTB.DIR |= PIN0_bm;                                  /* set pin 0 of PORT B (TXd) as output*/
+    VPORTB.DIR |= PIN0_bm; /* set pin 0 of PORT B (TXd) as output*/
 
-    USART3.BAUD = (uint16_t)(USART_BAUD_RATE(115200));       /* set the baud rate*/
+    USART3.BAUD = (uint16_t) (USART_BAUD_RATE(115200)); /* set the baud rate*/
 
-    USART3.CTRLC = USART_CHSIZE0_bm | USART_CHSIZE1_bm;     /* set the data format to 8-bit*/
+    USART3.CTRLC = USART_CHSIZE_0_bm | USART_CHSIZE_1_bm; /* set the data format to 8-bit*/
 
-    USART3.CTRLB |= (USART_TXEN_bm);        /* enable transmitter*/
-    
+    USART3.CTRLB |= (USART_TXEN_bm); /* enable transmitter*/
+
     data_stream.start_token = START_TOKEN;
     data_stream.end_token = (~START_TOKEN);
 }

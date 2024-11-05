@@ -1,4 +1,4 @@
-/*  
+/*
  * \file uart.c
  *
  * \brief Send data stream to Data Visualizer.
@@ -28,45 +28,57 @@
 #include <string.h>
 #include "uart.h"
 
-char TX_buffer[sizeof(data_stream)];
+data_visualizer data_stream;
+
+char TX_buffer[sizeof (data_stream)];
 
 /*
  * Communication interface functions
  */
 void USART_init(void)
 {
-    VPORTB.DIR &= ~PIN1_bm;                                 /* set pin 1 of PORT B (RXd) as input*/
-    VPORTB.DIR |= PIN0_bm;                                  /* set pin 0 of PORT B (TXd) as output*/    USART3.BAUD = (uint16_t)(USART_BAUD_RATE(115200));       /* set the baud rate*/
-    USART3.CTRLC = USART_CHSIZE0_bm | USART_CHSIZE1_bm;     /* set the data format to 8-bit*/
-    USART3.CTRLB |= (USART_TXEN_bm | USART_RXEN_bm);        /* enable transmitter*/
-    
+    VPORTB.DIR &= ~PIN1_bm; /* set pin 1 of PORT B (RXd) as input*/
+
+    VPORTB.DIR |= PIN0_bm; /* set pin 0 of PORT B (TXd) as output*/
+
+    USART3.BAUD = (uint16_t) (USART_BAUD_RATE(115200)); /* set the baud rate*/
+
+    USART3.CTRLC = USART_CHSIZE_0_bm | USART_CHSIZE_1_bm; /* set the data format to 8-bit*/
+
+    USART3.CTRLB |= (USART_TXEN_bm | USART_RXEN_bm); /* enable transmitter*/
+
     data_stream.start_token = START_TOKEN;
     data_stream.end_token = (~START_TOKEN);
 }
 
-void DS_start_data_transmit(void) {
-    memcpy(TX_buffer, &data_stream, sizeof(data_stream));
+void DS_start_data_transmit(void)
+{
+    memcpy(TX_buffer, &data_stream, sizeof (data_stream));
 
-    USART3.CTRLA =  USART_DREIE_bm;     /* Enable Transmit Complete interrupt*/
-    USART3.TXDATAL = TX_buffer[0];  /* Send the first byte of the buffer*/
-                                               /* once the first byte is transmitted the ISR will kick in*/
+    USART3.CTRLA = USART_DREIE_bm; /* Enable Transmit Complete interrupt*/
+    USART3.TXDATAL = TX_buffer[0]; /* Send the first byte of the buffer*/
+    /* once the first byte is transmitted the ISR will kick in*/
 }
 
-ISR (USART3_DRE_vect) {
+ISR(USART3_DRE_vect)
+{
     volatile static uint8_t tx_count = 1;
 
-    if (data_stream.data_available) {
+    if (data_stream.data_available)
+    {
 
-        if (tx_count < (sizeof(TX_buffer) - 1)) {
+        if (tx_count < (sizeof (TX_buffer) - 1))
+        {
             USART3.TXDATAL = TX_buffer[tx_count];
             tx_count++;
         }
-        else{
-            
+        else
+        {
+
             tx_count = 1;
             data_stream.data_available = 0;
-            USART3.CTRLA &=  ~USART_DREIE_bm;   /* Disable Transmit Complete interrupt*/
-                                                /* No more bytes available*/
+            USART3.CTRLA &= ~USART_DREIE_bm; /* Disable Transmit Complete interrupt*/
+            /* No more bytes available*/
         }
     }
 }

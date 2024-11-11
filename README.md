@@ -3,7 +3,7 @@
 
 # Training on OPAMP, XOSCHF and MVIO
 
-This training consists of 6 assignments exploring some of the new features of the AVR® DB, namely: The Analog Signal Conditioning (OPAMP), the High Frequency Crystal Oscillator (XOSCHF) and the Multi Voltage I/O (MVIO). 
+This training consists of six assignments exploring some of the new features of the AVR® DB, namely the Analog Signal Conditioning (OPAMP), the High Frequency Crystal Oscillator (XOSCHF) and the Multi Voltage I/O (MVIO). 
 
 The OPAMP peripheral features up to three internal operational amplifiers (op amps). The op amps can be configured in a multitude of different operations using internal multiplexers and resistor ladders. 
 
@@ -26,33 +26,33 @@ VDDIO2 Failure Detection
 
 Each assignment also comes with a solution project found in the corresponding solution folder. 
 
-**NOTE:** The newest version of the code will be slightly different from the code seen in the Training video and guide due to header file and compiler updates.
+**Note:** The newest version of the code will be slightly different from the code seen in the Training video and guide due to header file and compiler updates.
 
-**Click on the below image for Training video**
+**Click the image below to access the training video.**
 <p align="left">
 <br><a href="https://www.youtube.com/playlist?list=PL9B4edd-p2ag0ErR65zx306mtoHysMyPh" rel="nofollow"><img src="images/YT_Training_AVR_DB.png" alt="AVR DB" width="500"/></a>
 </p>
 
 ## Related Documentation
 
-* [Training Getting Started with AVR DB OPAMP, XOSCHF and MVIO - MPLAB](https://microchip.com/DS40002278)
+* [Training Getting Started With AVR DB OPAMP, XOSCHF and MVIO - MPLAB®](https://microchip.com/DS40002278)
 * [AVR128DB48 Device Page](https://www.microchip.com/wwwproducts/en/AVR128DB48)
 * [AVR128DB48 Curiosity Nano User Guide](https://www.microchip.com/DS50003037)
 
 ### Future Reading
-* [TB3286 - Getting Started with Analog Signal Conditioning (OPAMP)](https://microchip.com/DS90003286)
-* [TB3272 - Getting Started with External High-Frequency Oscillator on AVR DB](https://microchip.com/DS90003272)
+* [TB3286 - Getting Started With Analog Signal Conditioning (OPAMP)](https://microchip.com/DS90003286)
+* [TB3272 - Getting Started With External High-Frequency Oscillator on AVR DB](https://microchip.com/DS90003272)
 * [TB3287 - Getting Started With MVIO](https://microchip.com/DS90003287)
 
 ## Software Used
 
-* [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) 6.20 or later
-* [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) 5.5.1 or later
-* [MPLAB® XC8](http://www.microchip.com/mplab/compilers) 2.50 or later
-* MPLAB AVR-Dx_DFP version 2.6.303 or later
-* [MPLAB® Data Visualizer Stand alone](https://www.microchip.com/mplab/mplab-data-visualizer) version 1.3.1677 or later
+* [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) v6.20 or later
+* [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) v5.5.1 or later
+* [MPLAB® XC8](http://www.microchip.com/mplab/compilers) v2.50 or later
+* MPLAB AVR-Dx_DFP version v2.6.303 or later
+* [MPLAB® Data Visualizer Stand alone](https://www.microchip.com/mplab/mplab-data-visualizer) version v1.3.1677 or later
 * [MPLAB® Mindi™ Analog Simulator](https://www.microchip.com/mplab/mplab-mindi)
-* For the Atmel Studio version of these projects, please go to [this repository](https://github.com/microchip-pic-avr-examples/avr128db48-training-on-opamp-xoschf-mvio-studio)
+* For the Atmel Studio version of these projects, refer to [this repository](https://github.com/microchip-pic-avr-examples/avr128db48-training-on-opamp-xoschf-mvio-studio)
 
 
 ## Hardware Used
@@ -61,7 +61,7 @@ Each assignment also comes with a solution project found in the corresponding so
 
 ## Setup
 
-Most assignments can be completed using the AVR128DB48 Curiosity Nano without any extra components, but some assignments require the MPLAB® Data Visualizer Stand alone, MPLAB® Mindi™ Analog Simulator, a logic analyzer or hardware modifications. See the training manual for setup of specific assignments.
+Most assignments can be completed using the AVR128DB48 Curiosity Nano without any extra components, but some require the MPLAB Data Visualizer stand-alone, MPLAB® Mindi™ Analog Simulator, a logic analyzer or hardware modifications. See the training manual for the setup of specific assignments.
 
 ![MCHP](images/avr128db48-cnano.png)
 
@@ -69,13 +69,13 @@ Most assignments can be completed using the AVR128DB48 Curiosity Nano without an
 
 * Connect the AVR128DB48 Curiosity Nano to the computer using a USB cable
 * Clone the repository or download the zip to get the source code
-* Open the .X projects with MPLAB in the assignment folder for the desired assignment
+* Use MPLAB to open the `.X` projects in the folder of the desired assignment
 * Complete the assignment according to the training manual 
-* Press *Make and Program Device* to run the example
+* Press **Make and Program Device** to run the example
 
 ![SetUpAssignment](images/MplabSetUp.png)
 
 
 ## Conclusion
 
-After completing the training you should have a better understanding of some of the new features of the AVR DB such as the OPAMP, XOSCHF and MVIO.
+This training facilitates a better understanding of some of the new features of the AVR DB such as the OPAMP, XOSCHF and MVIO.

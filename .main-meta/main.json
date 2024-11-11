@@ -36,14 +36,12 @@
                 "versionRange": "*"
             }
         },
-        "author": "Martin Mostad",
-        "peripherals": ["OPAMP", "MVIO", "CLKCTRL", "ADC", "TCD"],
+        "author": "Microchip",
+        "peripherals": ["OPAMP", "MVIO", "USART", "ADC", "DAC", "RTC", "TCB", "VREF"],
         "keywords": [
-            "Analog Signal Conditioning",
             "Getting Started",
             "Resistor Ladder",
 			"Adjustable Gain",
-            "Programmable Gain",
             "Operational Amplifier",
             "Op Amp",
             "Simulation",
@@ -52,9 +50,7 @@
             "Unity Gain Buffer",
             "Programmable Gain Amplifier",
             "PGA",
-            "Instrumentation Amplifier",
-            "Multi Voltage I/O",
-            "Multi Power Domain",
+            "MVIO",
             "Power Monitor",
             "VDDIO2",
             "Crystal",
@@ -62,13 +58,10 @@
             "Clock Failure Detection",
             "CFD",
             "XOSCHF",
-            "NMI",
             "PLL",
-            "AVR-DB",
-            "AVRDB",
-            "training-opamp-xoschf-mvio",
 			"Curiosity Nano",
 			"MPLAB Data Visualizer",
+            "Data Streamer",
 			"Mindi"			
         ],
         "additionalData": {

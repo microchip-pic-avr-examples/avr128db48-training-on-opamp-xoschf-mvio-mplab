@@ -60,7 +60,7 @@ void myTCB1ISR(void);
 
 
 void sine_wave_table_init(void);
-void adc_resrdy(void);
+void myADCISR(void);
 
 /*
     Main application
@@ -75,7 +75,7 @@ int main(void)
 
     sine_wave_table_init();
 
-    ADC0_RegisterResrdyCallback(adc_resrdy);
+    ADC0_RegisterResrdyCallback(myADCISR);
     RTC_SetOVFIsrCallback(myRTCISR);
     TCB0_CaptureCallbackRegister(myTCB0ISR);
     TCB1_CaptureCallbackRegister(myTCB1ISR);
@@ -121,7 +121,7 @@ void myTCB1ISR(void)
     /* Clear interrupt flag */
 }
 
-void adc_resrdy(void)
+void myADCISR(void)
 {
     DataStreamer.opampVal = (int16_t) ((int16_t) ADC0.RES >> 3);
     DataStreamer.opampVal = ((int16_t) (DataStreamer.opampVal * 32) / 10);

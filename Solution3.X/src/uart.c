@@ -43,7 +43,7 @@ void USART_init(void)
 
     USART3.BAUD = (uint16_t) (USART_BAUD_RATE(115200)); /* set the baud rate*/
 
-    USART3.CTRLC = USART_CHSIZE_0_bm | USART_CHSIZE_1_bm; /* set the data format to 8-bit*/
+    USART3.CTRLC = USART_CHSIZE_8BIT_gc; /* set the data format to 8-bit*/
 
     USART3.CTRLB |= (USART_TXEN_bm | USART_RXEN_bm); /* enable transmitter*/
 

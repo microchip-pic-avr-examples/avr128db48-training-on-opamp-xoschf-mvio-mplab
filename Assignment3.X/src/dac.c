@@ -64,7 +64,7 @@ void DAC0_init(void)
 
 void DAC0_setVal(uint16_t val)
 {
-    DAC0.DATA = (val << DAC_DATA_0_bp);
+    DAC0.DATA = (val << DAC_DATA_gp);
 }
 
 void DAC0_SineWaveTimer_init(void)

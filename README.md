@@ -46,10 +46,10 @@ Each assignment also comes with a solution project found in the corresponding so
 
 ## Software Used
 
-* [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) v6.20 or later
+* [MPLAB® X IDE](https://www.microchip.com/mplab/mplab-x-ide) v6.25 or later
 * [MPLAB® Code Configurator (MCC)](https://www.microchip.com/mplab/mplab-code-configurator) v5.5.1 or later
-* [MPLAB® XC8](http://www.microchip.com/mplab/compilers) v2.50 or later
-* MPLAB AVR-Dx_DFP version v2.6.303 or later
+* [MPLAB® XC8](http://www.microchip.com/mplab/compilers) v3.00 or later
+* MPLAB AVR-Dx_DFP version v2.7.321 or later
 * [MPLAB® Data Visualizer Stand alone](https://www.microchip.com/mplab/mplab-data-visualizer) version v1.3.1677 or later
 * [MPLAB® Mindi™ Analog Simulator](https://www.microchip.com/mplab/mplab-mindi)
 * For the Atmel Studio version of these projects, refer to [this repository](https://github.com/microchip-pic-avr-examples/avr128db48-training-on-opamp-xoschf-mvio-studio)

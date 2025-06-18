@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-training-on-opamp-xoschf-mvio-mplab",
-        "version": "2.0.0",
+        "version": "2.0.1",
         "displayName": "AVR DB training on OPAMP, XOSCHF and MVIO",
         "projectName": "avr128db48-training-on-opamp-xoschf-mvio-mplab",
         "shortDescription": "MPLAB X training code examples for the AVR DB family of microcontrollers, demonstrating use of the OPAMP, XOSCHF and MVIO peripherals.",
@@ -37,7 +37,16 @@
             }
         },
         "author": "Microchip",
-        "peripherals": ["OPAMP", "MVIO", "USART", "ADC", "DAC", "RTC", "TCB", "VREF"],
+        "peripherals": [
+            "OPAMP",
+            "MVIO",
+            "USART",
+            "ADC",
+            "DAC",
+            "RTC",
+            "TCB",
+            "VREF"
+        ],
         "keywords": [
             "Getting Started",
             "Resistor Ladder",
@@ -58,10 +67,10 @@
             "CFD",
             "XOSCHF",
             "PLL",
-			"Curiosity Nano",
-			"MPLAB Data Visualizer",
+            "Curiosity Nano",
+            "MPLAB Data Visualizer",
             "Data Streamer",
-			"Mindi"			
+            "Mindi"
         ],
         "additionalData": {
             "longDescription": {

@@ -10,17 +10,17 @@
         "shortDescription": "MPLAB X training code examples for the AVR DB family of microcontrollers, demonstrating use of the OPAMP, XOSCHF and MVIO peripherals.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=6.20.0"
+            "semverRange": ">=6.25.0"
         },
         "compiler": [
             {
                 "name": "XC8",
-                "semverRange": "^2.50.0"
+                "semverRange": "^3.00.0"
             }
         ],
         "dfp": {
             "name": "AVR-Dx_DFP",
-            "semverRange": "^2.6.303"
+            "semverRange": "^2.7.321"
         },
         "configurator": {
             "name": "MCC",
